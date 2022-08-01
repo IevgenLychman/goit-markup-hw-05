@@ -39,7 +39,14 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.transition {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /*--------HEADER-------*/
+
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -90,21 +97,21 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
+
+  transition-property: color;
 }
 
 .nav-link + .nav-link {
   margin-left: 50px;
 }
 
-.nav-link.current {
+.current {
   color: var(--hover-color);
 }
 
-.nav-list :hover,
-.nav-list :focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--hover-color);
-  background-color: var(--background-color);
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact {
@@ -113,11 +120,13 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   list-style-type: none;
+
   padding: 0;
   display: flex;
   margin-left: 305px;
   align-items: center;
 }
+
 .contact-list {
   color: var(--secondary-text-color);
   display: flex;
@@ -139,6 +148,8 @@ img {
   padding-bottom: 32px;
   display: flex;
   align-items: center;
+
+  transition-property: color;
 }
 
 .contact-icon {
@@ -202,6 +213,8 @@ img {
   cursor: pointer;
 
   padding: 10px 32px;
+
+  transition-property: background-color;
 }
 
 .btn-order:hover,
@@ -395,6 +408,8 @@ img {
   align-items: center;
   justify-content: center;
   background-color: var(--background-color);
+
+  transition-property: background-color, color;
 }
 
 .social-icon {
@@ -440,6 +455,8 @@ img {
   justify-content: center;
   background-color: var(--background-color);
   outline: transparent;
+
+  transition-property: color, border;
 }
 
 .clients-icon {
@@ -500,12 +517,13 @@ img {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+
+  transition-property: color;
 }
 
 .address-contacts:hover,
 .address-contacts:focus {
   color: var(--hover-color);
-  background-color: var(--footer-background);
 }
 
 .footer-social {
@@ -537,6 +555,8 @@ img {
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color;
 }
 
 .footer-social-link {
@@ -571,6 +591,8 @@ img {
   background: var(--team-background);
   padding: 6px 22px;
   cursor: pointer;
+
+  transition-property: background-color, color, box-shadow, outline;
 }
 
 .filters-btn.current {
@@ -584,7 +606,6 @@ img {
 
 .filters-btn:hover,
 .filters-btn:focus {
-  border-radius: 4px;
   background: #188ce8;
   color: var(--background-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -617,6 +638,7 @@ img {
 .portfolio-link {
   text-decoration: none;
   display: block;
+  transition-property: box-shadow, outline;
 }
 
 .portfolio-link:hover,
@@ -626,34 +648,43 @@ img {
   outline: transparent;
 }
 
-.img-thumb:hover,
+/* .img-thumb:hover,
 .img-thumb:focus {
   opacity: 1;
   transform: translatex(0);
-}
-
+} */
+/* 
 .img-thumb {
   position: relative;
+  overflow: hidden;
+}
+
+.qwerty {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .overlay {
-  display: flex;
   position: absolute;
+  display: block;
+  content: "";
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  transform: translatey(100%);
-  transition: transform 5000ms ease;
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translatey(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   align-items: center;
   padding: 0 24px;
-  opacity: 0;
-  background: rgba(33, 150, 243, 0.9);
+
   color: var(--background-color);
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
-}
+} */
 
 .body-name {
   font-weight: 700;
