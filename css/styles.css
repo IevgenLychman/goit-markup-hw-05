@@ -754,7 +754,7 @@ img {
   width: 100%;
   height: 100%;
 
-  transform: translatey(100%);
+  transform: translatey(101%);
   transition-property: transform;
 
   padding: 0 24px;
